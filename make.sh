@@ -20,13 +20,13 @@ fi
 
 RELEASE_URL=$(curl -Ls -o /dev/null -w %{url_effective} "${REPOSITORY}/releases/latest")
 if [[ "${RELEASE_URL}" == "" ]]; then
-  echo "cannot detetermine release url."
+  echo "cannot determine release url."
   exit 1
 fi
 
 VERSION=$(echo "${RELEASE_URL}" | awk -F/ '{print $NF}')
 if [[ "${VERSION}" == "" ]]; then
-  echo "cannot detetermine version."
+  echo "cannot determine version."
   exit 1
 fi
 
