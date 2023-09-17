@@ -1,7 +1,7 @@
 nchat homebrew tap
 ==================
 
-This repository contains the [nchat](https://github.com/d99kris/nchat) formulae
+This repository contains the [nchat](https://github.com/d99kris/nchat) formula
 for Homebrew.
 
 
@@ -19,19 +19,19 @@ Ensure XCode command line developer tools is installed:
     brew install nchat
 
 
-Updating Formulae
------------------
+Updating Formula
+----------------
 
 The repository includes a script which will check latest Github release version
-and update the formulae accordingly.
+and update the formula accordingly.
 
     ./make.sh
 
 
-Testing Formulae Locally
-------------------------
+Testing Formula Locally
+-----------------------
 
-Test run the formulae locally with the following command.
+Test run the formula locally with the following command.
 
     brew install -vd ./Formula/nchat.rb
 
