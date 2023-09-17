@@ -1,4 +1,4 @@
-Nchat Homebrew Tap
+nchat homebrew tap
 ==================
 
 This repository contains the [nchat](https://github.com/d99kris/nchat) formulae
