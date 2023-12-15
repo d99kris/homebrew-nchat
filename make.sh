@@ -41,5 +41,31 @@ if [[ "${?}" != "0" ]]; then
   exit 1
 fi
 
+git stage Formula/nchat.rb
+if [[ "${?}" != "0" ]]; then
+  echo "failed staging formula."
+  exit 1
+fi
+
+git commit -m "release ${VERSION}"
+if [[ "${?}" != "0" ]]; then
+  echo "failed committing formula."
+  exit 1
+fi
+
 echo "success"
+
+echo ""
+echo "diff:"
+git diff @{u}..
+
+echo ""
+echo "log:"
+git log @{u}..
+
+echo ""
+echo "to push run:"
+echo "git push"
+echo ""
+
 exit 0
