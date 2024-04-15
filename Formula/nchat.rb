@@ -5,6 +5,9 @@ class Nchat < Formula
   sha256 "368cfe30594b88c580d9e9ccf24a0ff4eda7e6fea3d5a2e0f4051eab81fbf9ca"
   license "MIT"
 
+  option "without-whatsapp"
+  option "without-telegram"
+
   depends_on "ccache"
   depends_on "cmake" => :build
   depends_on "go"
@@ -17,8 +20,15 @@ class Nchat < Formula
   depends_on "sqlite"
 
   def install
+    protocols = []
+    if build.without? "telegram"
+      protocols << "-DHAS_TELEGRAM=OFF"
+    end
+    if build.without? "whatsapp"
+      protocols << "-DHAS_WHATSAPP=OFF"
+    end
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", *protocols, *std_cmake_args
       system "make", "-s"
       system "make", "install"
     end
