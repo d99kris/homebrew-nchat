@@ -18,6 +18,11 @@ Ensure XCode command line developer tools is installed:
     brew tap d99kris/nchat
     brew install nchat
 
+Optionally one can disable protocols using `--without-whatsapp` and
+`--without-telegram`, for example:
+
+    brew install nchat --without-telegram
+
 
 Updating Formula
 ----------------
