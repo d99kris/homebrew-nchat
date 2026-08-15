@@ -1,8 +1,8 @@
 class Nchat < Formula
   desc "Terminal-based Telegram / WhatsApp client"
   homepage "https://github.com/d99kris/nchat"
-  url "https://github.com/d99kris/nchat/archive/refs/tags/v5.17.26.tar.gz"
-  sha256 "0c8730052d1c4ca2b41102eb433bdae8643b0e261a6dbaab8c0aca9f2971465e"
+  url "https://github.com/d99kris/nchat/archive/refs/tags/v5.18.20.tar.gz"
+  sha256 "49312e609ea3140246ed434c402c714f9e461f2f6381b349046bc3c29d579d5c"
   license "MIT"
   head "https://github.com/d99kris/nchat.git", branch: "master"
 
